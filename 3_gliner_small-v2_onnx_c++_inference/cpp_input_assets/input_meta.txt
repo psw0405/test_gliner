@@ -1,0 +1,6 @@
+# shape metadata for gliner_onnx_inference.cpp
+batch_size=1
+sequence_length=166
+num_spans=420
+text_length_dim=1
+span_idx_last_dim=2
