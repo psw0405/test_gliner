@@ -1,0 +1,12 @@
+{
+  "repo_id": "urchade/gliner_small-v2",
+  "source_url": "https://huggingface.co/urchade/gliner_small-v2",
+  "destination": "c:\\Users\\sungw\\git_repo\\test_gliner\\4_base_model_download\\gliner_small-v2",
+  "resolved_local_path": "C:\\Users\\sungw\\git_repo\\test_gliner\\4_base_model_download\\gliner_small-v2",
+  "downloaded_at_utc": "2026-03-19T15:40:50.738793+00:00",
+  "revision": "c53207e299e3e97152859afa5741ddec09f09208",
+  "file_count": 9,
+  "total_bytes": 610659469,
+  "hf_access_token_count_used": 0,
+  "hf_access_token_env_used": false
+}
