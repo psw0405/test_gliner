@@ -5,7 +5,19 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(NOT DEFINED ONNXRUNTIME_DIR)
-  message(FATAL_ERROR "Set ONNXRUNTIME_DIR to the extracted ONNX Runtime package path.")
+  if(DEFINED ENV{ONNXRUNTIME_DIR})
+    set(ONNXRUNTIME_DIR "$ENV{ONNXRUNTIME_DIR}")
+  else()
+    message(FATAL_ERROR "Set ONNXRUNTIME_DIR (or environment variable ONNXRUNTIME_DIR) to the extracted ONNX Runtime package path.")
+  endif()
+endif()
+
+if(NOT EXISTS "${ONNXRUNTIME_DIR}/include/onnxruntime_cxx_api.h")
+  message(FATAL_ERROR "ONNX Runtime header not found: ${ONNXRUNTIME_DIR}/include/onnxruntime_cxx_api.h")
+endif()
+
+if(NOT EXISTS "${ONNXRUNTIME_DIR}/lib")
+  message(FATAL_ERROR "ONNX Runtime lib directory not found: ${ONNXRUNTIME_DIR}/lib")
 endif()
 
 add_executable(gliner_onnx_inference gliner_onnx_inference.cpp)
