@@ -2,6 +2,8 @@
 
 This folder now supports Ubuntu build/run for GLiNER ONNX C++ inference.
 
+General usage (Windows + Ubuntu + I/O format) is documented in `README.md`.
+
 Supported baseline:
 - Ubuntu `20.04` / `22.04` / `24.04` (x86_64)
 - ONNX Runtime Linux x64 SDK (tested with `1.24.4`)
